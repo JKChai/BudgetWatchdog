@@ -51,7 +51,9 @@ export default function About() {
           <ul style={{ color: "var(--muted)", lineHeight: "1.6", paddingLeft: "3.5rem" }}>
             <li><strong>Interactive Budget Summary</strong>: Breakdown of spending habits.</li>
             <li><strong>Overspend Alerts</strong>: Dynamic warnings when categories are close to or over limits.</li>
+            <li><strong>Analyze with AI</strong>: AI‑generated budget insights and recommendations.</li>
             <li><strong>Risk-Aware Savings suggestions</strong>: Specific product classes (CDs, ETFs, stocks) matching risk.</li>
+            <li><strong>Project with AI</strong>: AI‑generated savings projection and risk‑aware analysis.</li>
             <li><strong>Plain-English Explanations</strong>: Intuitive breakdowns of budget status and options.</li>
           </ul>
         </section>
