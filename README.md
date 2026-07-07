@@ -151,6 +151,15 @@ This gives the project:
 - Node.js 18+  
 - npm (or yarn/pnpm)  
 
+### 5.0 Environment Variables
+
+Create a `.agents/.env` file containing your Gemini API key:
+```
+GEMINI_API_KEY=your-gemini-api-key-here
+```
+This file is ignored by git (see .gitignore) and will be loaded by `load_dotenv()` in `agents/main.py`.
+
+
 ### 5.1 Start the agent backend
 
 From the project root:
