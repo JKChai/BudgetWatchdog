@@ -59,6 +59,7 @@ On the **Savings Coach** page you can:
 
 Architecture Overview (ASCII)
 
+```
 +------------------------+          +---------------------------+
 |   Next.js Frontend     |          |   FastAPI (agents/main)   |
 |                        |          |                           |
@@ -71,7 +72,7 @@ Architecture Overview (ASCII)
                         +--------v--------+           +--------v--------+
                         | BudgetAnalyst   |           | SavingsCoach    |
                         +-----------------+           +-----------------+
-
+```
 
 This project is split into a **Next.js frontend** and a **Python ADK backend** in the `.agents` directory.
 
