@@ -10,7 +10,7 @@ from tools.savings import savings_projection_skill
 
 savings_agent = LlmAgent(
     name="SavingsCoach",
-    model="gemini-2.5-flash-lite",
+    model="gemini-2.5-flash",
     instruction=(
         "You are a savings projection coach. Given the numeric projection data "
         "and risk level, explain what the user can expect in plain language, "
