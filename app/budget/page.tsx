@@ -238,6 +238,7 @@ export default function BudgetPage() {
               fontSize: "0.85rem",
               padding: "0.4rem 0.9rem",
               borderRadius: "999px",
+              border: "1px solid var(--primary)",
               display: "inline-flex",
               alignItems: "center",
               gap: "0.35rem",
