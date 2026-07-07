@@ -110,11 +110,16 @@ This project is split into a **Next.js frontend** and a **Python ADK backend** i
   - Calls orchestrator/skills and returns JSON to the frontend.
 
 - `agents/orchestrator.py`  
-  - Routes intents like `"analyze_budget"` to the right specialist agent function.
+  - Routes intents like `"analyze_budget"`and `project_savings` to the right specialist agent function.
 
 - `agents/budget_analyst.py`  
   - Entry point for the **BudgetAnalyst agent**.  
   - Calls `AnalyzeTransactionsSkill` and builds the AI Budget Insight response.
+
+- `agents/saving_coach.py`  
+  - Entry point for the **SavingCoach agent**.  
+  - Calls `SavingsProjectionSkill` to provide suggestions on risk awarenes.
+
 
 - `agents/tools/transactions.py`  
   - Implements `AnalyzeTransactionsSkill`:
