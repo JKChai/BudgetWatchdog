@@ -57,22 +57,21 @@ On the **Savings Coach** page you can:
 
 ## 3. Architecture
 
-```mermaid
-flowchart TD
-    subgraph Frontend
-        FE[Next.js Frontend] -->|Calls| APIAnalyze[API: /api/analyze-budget]
-        FE -->|Calls| APIProject[API: /api/project-savings]
-    end
+Architecture Overview (ASCII)
 
-    subgraph Backend
-        BE[FastAPI (agents/main.py)] -->|Routes| Orchestrator[Orchestrator (agents/orchestrator.py)]
-        Orchestrator -->|Skill| BudgetSkill[BudgetAnalyst (agents/budget_analyst.py)]
-        Orchestrator -->|Skill| SavingsSkill[SavingsProjection (agents/savings_coach.py)]
-    end
++------------------------+          +---------------------------+
+|   Next.js Frontend     |          |   FastAPI (agents/main)   |
+|                        |          |                           |
+|  /api/analyze-budget → |--------> |   Orchestrator            |
+|  /api/project-savings →|--------> |   (routes to skills)      |
++------------------------+          +-------------+-------------+
+                                                |
+                                 +--------------+--------------+
+                                 |                             |
+                        +--------v--------+           +--------v--------+
+                        | BudgetAnalyst   |           | SavingsCoach    |
+                        +-----------------+           +-----------------+
 
-    APIAnalyze -->|Forwards to| BudgetSkill
-    APIProject -->|Forwards to| SavingsSkill
-```
 
 This project is split into a **Next.js frontend** and a **Python ADK backend** in the `.agents` directory.
 
